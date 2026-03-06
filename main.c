@@ -63,7 +63,7 @@ int main(void)
 
     sorteaza_hobby(&p);
 
-    printf("=== date student dupa sortare hobby ===\n");
+    printf("=== Date student dupa sortare hobby ===\n");
     afiseaza_persoana(p);
 
     return 0;
