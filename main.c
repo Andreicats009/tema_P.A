@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define lungime_max 50
 #define hobby_max 10
@@ -13,27 +14,30 @@ typedef struct {
     int numar_hobby;
 } persoana;
 
+
+
 void afiseaza_persoana(persoana p)
 {
-    printf("nume: %s\n", p.nume);
-    printf("prenume: %s\n", p.prenume);
-    printf("oras: %s\n", p.oras);
-    printf("liceu: %s\n", p.liceu);
+    printf("Nume: %s\n", p.nume);
+    printf("Prenume: %s\n", p.prenume);
+    printf("Oras: %s\n", p.oras);
+    printf("Liceu: %s\n", p.liceu);
 
-    printf("hobby-uri:\n");
+    printf("Hobby-uri:\n");
     for(int i = 0; i < p.numar_hobby; i++)
     {
-        printf("%s\n", p.hobby[i]);
+        printf("  - %s\n", p.hobby[i]);
     }
+    printf("--------------------\n");
 }
 
-void sorteazaHobby(Persoana *p)
+void sorteaza_hobby(persoana *p)
 {
-    char temp[MAX_LEN];
+    char temp[lungime_max];
 
-    for(int i = 0; i < p->nrHobby - 1; i++)
+    for(int i = 0; i < p->numar_hobby - 1; i++)
     {
-        for(int j = i + 1; j < p->nrHobby; j++)
+        for(int j = i + 1; j < p->numar_hobby; j++)
         {
             if(strcmp(p->hobby[i], p->hobby[j]) > 0)
             {
@@ -44,7 +48,6 @@ void sorteazaHobby(Persoana *p)
         }
     }
 }
-
 int main(void)
 {
     printf("Hello, World!\n");
