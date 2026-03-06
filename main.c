@@ -27,6 +27,24 @@ void afiseaza_persoana(persoana p)
     }
 }
 
+void sorteazaHobby(Persoana *p)
+{
+    char temp[MAX_LEN];
+
+    for(int i = 0; i < p->nrHobby - 1; i++)
+    {
+        for(int j = i + 1; j < p->nrHobby; j++)
+        {
+            if(strcmp(p->hobby[i], p->hobby[j]) > 0)
+            {
+                strcpy(temp, p->hobby[i]);
+                strcpy(p->hobby[i], p->hobby[j]);
+                strcpy(p->hobby[j], temp);
+            }
+        }
+    }
+}
+
 int main(void)
 {
     printf("Hello, World!\n");
