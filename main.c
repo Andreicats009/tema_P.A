@@ -15,7 +15,6 @@ typedef struct {
 } persoana;
 
 
-
 void afiseaza_persoana(persoana p)
 {
     printf("Nume: %s\n", p.nume);
