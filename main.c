@@ -13,11 +13,19 @@ typedef struct {
     int numar_hobby;
 } persoana;
 
+void afiseaza_persoana(persoana p)
+{
+    printf("nume: %s\n", p.nume);
+    printf("prenume: %s\n", p.prenume);
+    printf("oras: %s\n", p.oras);
+    printf("liceu: %s\n", p.liceu);
 
-
-
-
-
+    printf("hobby-uri:\n");
+    for(int i = 0; i < p.numar_hobby; i++)
+    {
+        printf("%s\n", p.hobby[i]);
+    }
+}
 
 int main(void)
 {
