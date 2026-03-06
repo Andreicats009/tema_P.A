@@ -14,7 +14,6 @@ typedef struct {
     int numar_hobby;
 } persoana;
 
-
 void afiseaza_persoana(persoana p)
 {
     printf("Nume: %s\n", p.nume);
@@ -47,7 +46,6 @@ void sorteaza_hobby(persoana *p)
         }
     }
 }
-
 
 int main(void)
 {
