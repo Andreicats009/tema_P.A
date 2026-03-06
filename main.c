@@ -48,8 +48,26 @@ void sorteaza_hobby(persoana *p)
         }
     }
 }
+
+
 int main(void)
 {
-    printf("Hello, World!\n");
+    persoana p = {
+        "popescu",
+        "ion",
+        "bucuresti",
+        "colegiul_national",
+        {"fotbal", "citit", "programare"},
+        3
+    };
+
+    printf("=== Date student inainte de sortare ===\n");
+    afiseaza_persoana(p);
+
+    sorteaza_hobby(&p);
+
+    printf("=== date student dupa sortare hobby ===\n");
+    afiseaza_persoana(p);
+
     return 0;
 }
