@@ -9,7 +9,14 @@ typedef struct {
     char prenume[lungime_max];
     char oras[lungime_max];
     char liceu[lungime_max];
+    char hobby[hobby_max][lungime_max];
+    int numar_hobby;
 } persoana;
+
+
+
+
+
 
 
 int main(void)
